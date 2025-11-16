@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registration Form</title>
+  <title>Student Registration Form</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -32,11 +32,14 @@
       display: block;
       margin-bottom: 5px;
       color: #555;
+      font-weight: bold;
     }
 
     input[type="text"],
     input[type="email"],
     input[type="password"],
+    input[type="date"],
+    input[type="number"],
     select {
       width: 100%;
       padding: 10px;
@@ -86,16 +89,23 @@
 </head>
 <body>
   <div class="container">
-    <h2>Registration Form</h2>
+    <h2>Student Registration Form</h2>
     <form>
+      
+      <label>Registration No:</label>
+      <input type="text" name="regno" required>
+
       <label>Full Name:</label>
       <input type="text" name="fullname" required>
 
+      <label>Date of Birth:</label>
+      <input type="date" name="dob" required>
+
+      <label>Phone Number:</label>
+      <input type="number" name="phone" required>
+
       <label>Email:</label>
       <input type="email" name="email" required>
-
-      <label>Password:</label>
-      <input type="password" name="password" required>
 
       <div class="gender">
         <label>Gender:</label>
@@ -103,18 +113,39 @@
         <input type="radio" name="gender" value="female"> Female
       </div>
 
-      <label>Country:</label>
-      <select name="country" required>
+      <label>Department:</label>
+      <select name="dept" required>
         <option value="">Select</option>
-        <option>India</option>
-        <option>USA</option>
-        <option>UK</option>
+        <option>CSE</option>
+        <option>ECE</option>
+        <option>EEE</option>
+        <option>CIVIL</option>
+        <option>MECH</option>
+      </select>
+
+      <label>Class:</label>
+      <select name="class" required>
+        <option value="">Select</option>
+        <option>1st Year</option>
+        <option>2nd Year</option>
+        <option>3rd Year</option>
+        <option>4th Year</option>
+      </select>
+
+      <label>Lab Batch:</label>
+      <select name="batch" required>
+        <option value="">Select</option>
+        <option>Batch A</option>
+        <option>Batch B</option>
+        <option>Batch C</option>
+        <option>Batch D</option>
       </select>
 
       <div class="buttons">
         <input type="submit" value="Register">
         <input type="reset" value="Clear">
       </div>
+
     </form>
   </div>
 </body>
